@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>javascript - Get the number of rows in a HTML table - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?v=00a326f96f68">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=41f6e13ade69">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Get the number of rows in a HTML table">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;ve browsed the Internet looking for an answer on this but I can&#39;t find a solution. I want to count the amount of rows my HTML table has in when a link button is pressed. Can someone help me out p...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table">
+    <link rel="canonical" href="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/javascript - Get the number of rows in a HTML table - Stack Overflow.html">
+
+    
+    
+    <script type="text/javascript" async="" src="http://engine.adzerk.net/ados?t=1424725489001&request={%22Placements%22:[{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk1816632451%22,%22AT%22:4,%22Z%22:43},{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk1807040988%22,%22AT%22:4,%22Z%22:44},{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk1002060115%22,%22ATA%22:[17,2221],%22Z%22:45}],%22Keywords%22:%22javascript%2Cjquery%2Chtml%2Ctable%22,%22Referrer%22:%22https%3A%2F%2Fwww.google.com%2F%22,%22IsAsync%22:true}"></script><script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/quant.js"></script><script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/beacon.js"></script><script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/analytics.js"></script><script type="text/javascript" async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/ados.js"></script><script src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/jquery.min.js"></script>
+    <script src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/all.css">
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Get the number of rows in a HTML table&#39;" href="http://stackoverflow.com/feeds/question/11742946">
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+    <meta name="twitter:app:id:iphone" content="871299723">
+    <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table">
+    <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+    <meta name="twitter:app:id:ipad" content="871299723">
+    <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table">
+    <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+    <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table">
+    <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+    <script>
+        
+        StackExchange.ready(function () {
+                
+                StackExchange.using("snippets", function () {
+                    StackExchange.snippets.initSnippetRenderer();
+                });
+                
+
+            StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:11742946});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '11742946');
+            
+                    });
+    </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1424725488,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"e9331774cad66c8432d0013b3014f416","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"3ab25183041d","js/moderator.en.js":"684f59be6a7b","js/full-anon.en.js":"7fea3fd132e7","js/full.en.js":"28a6f66fe841","js/wmd.en.js":"ec28b853e2b2","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"0c842be285f8","js/help.en.js":"1ad0e1555080","js/tageditor.en.js":"49a50c536a09","js/tageditornew.en.js":"e51ed5f88e96","js/inline-tag-editing.en.js":"21223186b436","js/revisions.en.js":"6c7265ea9fa1","js/review.en.js":"9a5abc72a004","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"d40d43cbe716","js/explore-qlist.en.js":"257ba4cb7b04","js/events.en.js":"dd374dfee545","js/keyboard-shortcuts.en.js":"42a7974eb774","js/external-editor.en.js":"b04e37426de6","js/external-editor.en.js":"b04e37426de6","js/snippet-javascript.en.js":"71118828e7b3","js/snippet-javascript-codemirror.en.js":"e7cfbb96339d"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/full-anon.en.js"></script><script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/snippet-javascript.en.js"></script><script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/post-validation.en.js"></script><script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/prettify-full.en.js"></script><script async="" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/external-editor.en.js"></script><style type="text/css"></style><script type="text/javascript" src="http://static.adzerk.net/Extensions/adFeedback.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/adFeedback.css"><link type="text/css" rel="stylesheet" href="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/jobs.min.css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://blog.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f11742946%2fget-the-number-of-rows-in-a-html-table" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f11742946%2fget-the-number-of-rows-in-a-html-table" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 137 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                            <a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f11742946%2fget-the-number-of-rows-in-a-html-table" class="login-link">sign up</a>
+                            <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f11742946%2fget-the-number-of-rows-in-a-html-table" class="login-link">log in</a>
+                            <a href="http://stackoverflow.com/tour">tour</a>
+
+                            <a href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                            <a href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=anon-topbar">stack overflow careers</a>
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+	<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+			<!--googleoff: all-->
+
+<div id="herobox-mini">
+    <div id="hero-content">
+        <span id="controls">
+            <a href="http://stackoverflow.com/tour" id="tell-me-more" class="button">Take the 2-minute tour</a>
+            <span id="close"><a title="click to dismiss">×</a></span>
+        </span>
+        <div id="blurb">
+            Stack Overflow is a question and answer site for professional and enthusiast programmers. It's 100% free, no registration required.
+        </div>        
+    </div>
+    <script>
+        $('#tell-me-more').click(function () {
+            var clickSource = $("body").attr("class") + '-mini';
+            if ($("body").hasClass("questions-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("question-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("home-page")) {
+                clickSource = 'homepagemini';
+            }
+
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("aboutpage.click", { aboutclick_location: clickSource } , true);
+            });
+        });
+        $('#herobox-mini #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "close" }, true);
+            });
+            $.cookie("hero", "none", { path: "/", expires: 365 });
+            var $hero = $("#herobox-mini");
+            $hero.slideUp('fast', function () { $hero.remove(); });
+            return false;
+        });
+    </script>
+</div>
+			<!--googleon: all-->
+			<div id="question-header">
+			<h1 itemprop="name"><a href="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/javascript - Get the number of rows in a HTML table - Stack Overflow.html" class="question-hyperlink">Get the number of rows in a HTML table</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="11742946" id="question">
+
+    <script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1816632451",4).setZone(43) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1816632451">
+            <iframe id="ados_frame_adzerk1816632451_469078" frameborder="0" scrolling="no" height="90" width="728"></iframe><img height="0" width="0" border="0" style="position: absolute; display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;" src="http://engine.adzerk.net/i.gif?e=eyJhdiI6NDM3LCJhdCI6NCwiYnQiOjAsImNtIjoyMTM3NDcsImNoIjoxMTc4LCJjciI6NzI1ODE1LCJkaSI6IjZkZmRjNjIwNjYxNDRjMzFiZjJlM2JkMjJkZmE2MWZiIiwiZG0iOjEsImZjIjo3NTYxMjcsImZsIjo0NjkwNzgsImlwIjoiMTQ0LjExOC4xMDIuMzMiLCJrdyI6ImphdmFzY3JpcHQsanF1ZXJ5LGh0bWwsdGFibGUiLCJudyI6MjIsInBjIjozLCJwciI6NTc5MywicnQiOjIsInJmIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8iLCJzdCI6ODI3NywidWsiOiJ1ZTEtZGI5MmQ1Yzc2MTU2NDRjODg3NDE5OTYzMDU3ZDE0MDgiLCJ6biI6NDMsInRzIjoxNDI0NzI1NDg5MDc5LCJiZiI6dHJ1ZSwicG4iOiJhZHplcmsxODE2NjMyNDUxIiwiZnEiOjF9&s=V5vCWMJ-l4d5GCMtzjrYRtQpL2o"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="11742946">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">8</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b>1</b></div>   
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+        <p>I've browsed the Internet looking for an answer on this but I can't find a solution. I want to count the amount of rows my HTML table has in when a link button is pressed. Can someone help me out please?</p>
+
+<p>This is what I have so far:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln"> $</span><span class="pun">(</span><span class="str">'#HypSelectAll'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#gvPerformanceResult'</span><span class="pun">).</span><span class="pln">children</span><span class="pun">().</span><span class="pln">length</span><span class="pun">;</span><span class="pln">
+     </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> count</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        alert</span><span class="pun">(</span><span class="pln">i</span><span class="pun">);</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+ </span><span class="pun">});</span></code></pre>
+
+<p>But some reason it returns 0 even though I have about 12 rows in my table? I've checked my ID name and it's correct.</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag js-gps-track" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag js-gps-track" title="show questions tagged &#39;jquery&#39;" rel="tag">jquery</a> <a href="http://stackoverflow.com/questions/tagged/html" class="post-tag js-gps-track" title="show questions tagged &#39;html&#39;" rel="tag">html</a> <a href="http://stackoverflow.com/questions/tagged/table" class="post-tag js-gps-track" title="show questions tagged &#39;table&#39;" rel="tag">table</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/11742946" title="short permalink to this question" class="short-link" id="link-post-11742946">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/11742946/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/11742946/revisions" title="show all edits to this post">edited <span title="2012-08-01 01:15:44Z" class="relativetime">Aug 1 '12 at 1:15</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/250259/john-conde"><div class="gravatar-wrapper-32"><img src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/64839d31baaefafa58120e1a5a503d66" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/250259/john-conde">John Conde</a><br>
+        <span class="reputation-score" title="reputation score 121708" dir="ltr">122k</span><span title="41 gold badges"><span class="badge1"></span><span class="badgecount">41</span></span><span title="183 silver badges"><span class="badge2"></span><span class="badgecount">183</span></span><span title="250 bronze badges"><span class="badge3"></span><span class="badgecount">250</span></span>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2012-07-31 14:56:32Z" class="relativetime">Jul 31 '12 at 14:56</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1259536/scott-atkinson"><div class="gravatar-wrapper-32"><img src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/b188e7efd21f77fa0242c9b17f3830a6" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1259536/scott-atkinson">Scott Atkinson</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">278</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span><span title="28 bronze badges"><span class="badge3"></span><span class="badgecount">28</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-11742946" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-11742946" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" onclick=""></a>
+            </div>
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								5 Answers
+                                <span style="display:none;" itemprop="answerCount">5</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+        <a href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="11742966"></a>
+<div id="answer-11742966" class="answer accepted-answer" data-answerid="11742966" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="11742966">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">20</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Try:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#gvPerformanceResult tr'</span><span class="pun">).</span><span class="pln">length</span><span class="pun">;</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/11742966" title="short permalink to this answer" class="short-link" id="link-post-11742966">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/11742966/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-07-31 14:57:41Z" class="relativetime">Jul 31 '12 at 14:57</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/250259/john-conde"><div class="gravatar-wrapper-32"><img src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/64839d31baaefafa58120e1a5a503d66" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/250259/john-conde">John Conde</a><br>
+        <span class="reputation-score" title="reputation score 121708" dir="ltr">122k</span><span title="41 gold badges"><span class="badge1"></span><span class="badgecount">41</span></span><span title="183 silver badges"><span class="badge2"></span><span class="badgecount">183</span></span><span title="250 bronze badges"><span class="badge3"></span><span class="badgecount">250</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-11742966" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-15586144" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Note that this will not give the expected result with nested tables, i.e. tables that contain other tables.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/182971/sjoerd" title="37133 reputation" class="comment-user">Sjoerd</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment15586144_11742966"><span title="2012-07-31 14:58:47Z" class="relativetime-clean">Jul 31 '12 at 14:58</span></a></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-15586540" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Cheers mate! :)</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1259536/scott-atkinson" title="278 reputation" class="comment-user owner">Scott Atkinson</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment15586540_11742966"><span title="2012-07-31 15:11:37Z" class="relativetime-clean">Jul 31 '12 at 15:11</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-39098759" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Pye Because the question <i>is</i> tagged a jquery and their example also uses jquery. And why are you asking this two and a half years later?</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/250259/john-conde" title="121708 reputation" class="comment-user">John Conde</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment39098759_11742966"><span title="2014-08-04 15:00:39Z" class="relativetime-clean">Aug 4 '14 at 15:00</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-11742966" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" onclick=""></a>
+            </div>
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1807040988",4).setZone(44) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1807040988"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NzY0MDUsImF0Ijo0LCJidCI6MCwiY20iOjIxNDIyOCwiY2giOjExNzgsImNyIjo3MzQ1NTUsImRpIjoiYWIyNzQ1ZjNmMjIwNGExZGE4ZDM0YjZhNmI1NjA5NjgiLCJkbSI6MSwiZmMiOjc2NTE3MCwiZmwiOjQ3NjY0MiwiaXAiOiIxNDQuMTE4LjEwMi4zMyIsImt3IjoiamF2YXNjcmlwdCxqcXVlcnksaHRtbCx0YWJsZSIsIm1rIjoiamF2YXNjcmlwdCxqcXVlcnkiLCJudyI6MjIsInBjIjo1Ljc4LCJwciI6NzY1LCJydCI6MiwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLyIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1kYjkyZDVjNzYxNTY0NGM4ODc0MTk5NjMwNTdkMTQwOCIsInpuIjo0NCwidHMiOjE0MjQ3MjU0ODkwODEsImJmIjp0cnVlLCJwbiI6ImFkemVyazE4MDcwNDA5ODgiLCJ1ciI6Imh0dHA6Ly93d3cuc21hcnRjbGllbnQuY29tLyJ9&s=3PGPLiw93Fdn-2Gp6YkutLKtaFA" rel="nofollow" target="_blank" title=""><img src="http://static.adzerk.net/Advertisers/e09365265b5a4efd80267c9ccdea8371.png" title="" alt="" border="0" width="0" height="0" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 728px 90px;"></a><img height="0" width="0" border="0" style="position: absolute; display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;" src="http://engine.adzerk.net/i.gif?e=eyJhdiI6NzY0MDUsImF0Ijo0LCJidCI6MCwiY20iOjIxNDIyOCwiY2giOjExNzgsImNyIjo3MzQ1NTUsImRpIjoiYWIyNzQ1ZjNmMjIwNGExZGE4ZDM0YjZhNmI1NjA5NjgiLCJkbSI6MSwiZmMiOjc2NTE3MCwiZmwiOjQ3NjY0MiwiaXAiOiIxNDQuMTE4LjEwMi4zMyIsImt3IjoiamF2YXNjcmlwdCxqcXVlcnksaHRtbCx0YWJsZSIsIm1rIjoiamF2YXNjcmlwdCxqcXVlcnkiLCJudyI6MjIsInBjIjo1Ljc4LCJwciI6NzY1LCJydCI6MiwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLyIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1kYjkyZDVjNzYxNTY0NGM4ODc0MTk5NjMwNTdkMTQwOCIsInpuIjo0NCwidHMiOjE0MjQ3MjU0ODkwODIsImJmIjp0cnVlLCJwbiI6ImFkemVyazE4MDcwNDA5ODgifQ&s=xixTTnICs3M7PXpt9CycLCxCTBs"></div>
+  
+<a name="22380482"></a>
+<div id="answer-22380482" class="answer" data-answerid="22380482" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="22380482">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">10</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>var x = document.getElementById("myTable").rows.length;</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/22380482" title="short permalink to this answer" class="short-link" id="link-post-22380482">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/22380482/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-03-13 13:42:40Z" class="relativetime">Mar 13 '14 at 13:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1268494/user1268494"><div class="gravatar-wrapper-32"><img src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/a2e0b3e161f34f6be551cd532d0d2bc6" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1268494/user1268494">user1268494</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">111</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-22380482" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-38536456" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">nice to see non-jquery solution</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/595833/bobbyrne01" title="852 reputation" class="comment-user">bobbyrne01</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment38536456_22380482"><span title="2014-07-18 10:56:58Z" class="relativetime-clean">Jul 18 '14 at 10:56</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-22380482" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" onclick=""></a>
+            </div>
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="11743014"></a>
+<div id="answer-11743014" class="answer" data-answerid="11743014" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="11743014">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<blockquote>
+  <p>The following code assumes that your table has the ID 'MyTable'</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">language</span><span class="pun">=</span><span class="atv">"JavaScript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> oRows </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'MyTable'</span><span class="pun">).</span><span class="pln">getElementsByTagName</span><span class="pun">(</span><span class="str">'tr'</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> iRowCount </span><span class="pun">=</span><span class="pln"> oRows</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln">
+
+alert</span><span class="pun">(</span><span class="str">'Your table has '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> iRowCount </span><span class="pun">+</span><span class="pln"> </span><span class="str">' rows.'</span><span class="pun">);</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></code></pre>
+</blockquote>
+
+<p>Answer taken from : <a href="http://www.delphifaq.com/faq/f771.shtml" rel="nofollow">http://www.delphifaq.com/faq/f771.shtml</a>, which is the first result on google for the query : "Get the number of rows in a HTML table" ;)</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/11743014" title="short permalink to this answer" class="short-link" id="link-post-11743014">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/11743014/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2012-07-31 14:59:54Z" class="relativetime">Jul 31 '12 at 14:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1503324/al-th"><div class="gravatar-wrapper-32"><img src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/aa17b29e2cc12ec9ad7ae05d958ee08c" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1503324/al-th">Al_th</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">480</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-11743014" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-15586265" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">That's not cross browser.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/82526/saint-gerbil" title="1861 reputation" class="comment-user">Saint Gerbil</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment15586265_11743014"><span title="2012-07-31 15:02:24Z" class="relativetime-clean">Jul 31 '12 at 15:02</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-15586731" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">For my own personal knowledge, what is not cross browser in this solution ?</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/1503324/al-th" title="480 reputation" class="comment-user">Al_th</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment15586731_11743014"><span title="2012-07-31 15:17:47Z" class="relativetime-clean">Jul 31 '12 at 15:17</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-15588311" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">getElementsByTagName varies somewhat from IE, FF and (Chrome, Webkit, Opera)  IE7/8 have a habit of returning 0 for your example. Firefox can get confused with namespaces. In the later doesnt support the same style of namespaces.  <a href="http://www.webdeveloper.com/forum/showthread.php?t=248215" rel="nofollow">webdeveloper.com/forum/showthread.php?t=248215</a> <a href="http://webbugtrack.blogspot.co.uk/2007/09/bug-204-getelementsbytagname-doesnt.html" rel="nofollow">webbugtrack.blogspot.co.uk/2007/09/…</a> <a href="http://msdn.microsoft.com/en-us/library/ie/ms536439(v=vs.85).aspx" rel="nofollow">msdn.microsoft.com/en-us/library/ie/ms536439(v=vs.85).aspx</a> (comments)  I'd avoid getElementsByTagName.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/82526/saint-gerbil" title="1861 reputation" class="comment-user">Saint Gerbil</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment15588311_11743014"><span title="2012-07-31 16:04:38Z" class="relativetime-clean">Jul 31 '12 at 16:04</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-11743014" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" onclick=""></a>
+            </div>
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="11745042"></a>
+<div id="answer-11745042" class="answer" data-answerid="11745042" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="11745042">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>In the DOM, a <code>tr</code> element is (implicitly or explicitly) a child of <code>tbody</code>, <code>thead</code>, or <code>tfoot</code>, not a child of <code>table</code> (hence the 0 you got). So a general answer is:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#gvPerformanceResult &gt; * &gt; tr'</span><span class="pun">).</span><span class="pln">length</span><span class="pun">;</span></code></pre>
+
+<p>This includes the rows of the table but excludes rows of any inner table.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/11745042" title="short permalink to this answer" class="short-link" id="link-post-11745042">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/11745042/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-07-31 16:43:42Z" class="relativetime">Jul 31 '12 at 16:43</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1084437/jukka-k-korpela"><div class="gravatar-wrapper-32"><img src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/9ab016b2c4ccfa6878dfa7ce640e3d06" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1084437/jukka-k-korpela">Jukka K. Korpela</a><br>
+        <span class="reputation-score" title="reputation score 86649" dir="ltr">86.6k</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="57 silver badges"><span class="badge2"></span><span class="badgecount">57</span></span><span title="126 bronze badges"><span class="badge3"></span><span class="badgecount">126</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-11745042" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-11745042" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" onclick=""></a>
+            </div>
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="11743127"></a>
+<div id="answer-11743127" class="answer" data-answerid="11743127" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="11743127">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Well it depends on what you have in your table.</p>
+
+<p>its one of the following
+If you have only one table</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#gvPerformanceResult tr'</span><span class="pun">).</span><span class="pln">length</span><span class="pun">;</span></code></pre>
+
+<p>If you are concerned about sub tables but this wont work with tbody and thead (if you use them)</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#gvPerformanceResult&gt;tr'</span><span class="pun">).</span><span class="pln">length</span><span class="pun">;</span></code></pre>
+
+<p>Where by this will work (but is quite frankly overkill.)</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#gvPerformanceResult&gt;tbody&gt;tr'</span><span class="pun">).</span><span class="pln">length</span><span class="pun">;</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/11743127" title="short permalink to this answer" class="short-link" id="link-post-11743127">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/11743127/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-07-31 15:05:13Z" class="relativetime">Jul 31 '12 at 15:05</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/82526/saint-gerbil"><div class="gravatar-wrapper-32"><img src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/3a103a51557b2ff4a37fce74f6dced6b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/82526/saint-gerbil">Saint Gerbil</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,861</span><span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span><span title="32 bronze badges"><span class="badge3"></span><span class="badgecount">32</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-11743127" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-15589552" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">The second selector won't work at all.</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/106224/boltclock" title="278794 reputation" class="comment-user">BoltClock<span class="mod-flair" title="moderator">♦</span></a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#comment15589552_11743127"><span title="2012-07-31 16:46:21Z" class="relativetime-clean">Jul 31 '12 at 16:46</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-11743127" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" onclick=""></a>
+            </div>
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/11742946/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="11742946">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.com/">
+							<h2 class="space">Your Answer</h2>
+
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+            // Have to fire editor after snippets, if snippets enabled
+            if (StackExchange.options.snippets.enabled) {
+                StackExchange.using("snippets", function() {
+                    createEditor();
+                });
+            }
+            else {
+                createEditor();
+            }
+        });
+
+        function createEditor() {
+            prepareEditor({
+                heartbeatType: 'answer',
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                ,immediatelyShowMarkdownHelp:true
+                });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="e9331774cad66c8432d0013b3014f416">
+        <input id="author" name="author" type="text">
+    </div>
+</div>
+							<div style="position: relative;">
+								
+            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f11742946%2fget-the-number-of-rows-in-a-html-table%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Stack Exchange</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', '%2fquestions%2f11742946%2fget-the-number-of-rows-in-a-html-table%23new-answer');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag" title="show questions tagged &#39;jquery&#39;" rel="tag">jquery</a> <a href="http://stackoverflow.com/questions/tagged/html" class="post-tag" title="show questions tagged &#39;html&#39;" rel="tag">html</a> <a href="http://stackoverflow.com/questions/tagged/table" class="post-tag" title="show questions tagged &#39;table&#39;" rel="tag">table</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2012-07-31 14:56:32Z"><b>2 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>20059 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/11742946/get-the-number-of-rows-in-a-html-table?lastactivity" class="lastactivity-link" title="2014-03-13 13:42:40Z">11 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1002060115",[17,2221]).setZone(45) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1002060115"><div id="careersadsdoublehigh" style="display:none;"></div><img height="0" width="0" border="0" style="position: absolute; display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 0px 0px;" src="http://engine.adzerk.net/i.gif?e=eyJhdiI6NDE0LCJhdCI6MTcsImJ0IjowLCJjbSI6OTIxLCJjaCI6MTE3OCwiY3IiOjI2ODgsImRpIjoiYTY1NjVkMzY5MWFjNDQ4NTk4YjQxOTIzZGQ1ZmEzMzkiLCJkbSI6MSwiZmMiOjI0ODUsImZsIjoyNjYzLCJpcCI6IjE0NC4xMTguMTAyLjMzIiwia3ciOiJqYXZhc2NyaXB0LGpxdWVyeSxodG1sLHRhYmxlIiwibnciOjIyLCJwYyI6MCwicHIiOjYxNzM3LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLyIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1kYjkyZDVjNzYxNTY0NGM4ODc0MTk5NjMwNTdkMTQwOCIsInpuIjo0NSwidHMiOjE0MjQ3MjU0ODkwODMsImJmIjp0cnVlLCJwbiI6ImFkemVyazEwMDIwNjAxMTUifQ&s=g_7ieAaG5uy9GoJwBb-19zpvcG8"></div>  
+        <div id="hireme" class="blue looking tagged"><a href="http://careers.stackoverflow.com/jobs?a=2Z3UI" target="_blank" data-la="2Z3UI" data-hf="h" class="top"> <span>Looking for a job?</span></a><ul class="jobs"><li><a data-cid="87307" data-la="r7zS387uLsZ" href="http://careers.stackoverflow.com/jobs/80872/senior-full-stack-engineer-content-ingestion-beanstock-media" target="_blank" title="Senior Full-Stack Engineer: Content Ingestion, API, and Mobile-Web Client at Beanstock Media. Click to learn more.">Senior Full-Stack Engineer: Content Ingestion, API, and Mobile-Web Client<br><div class="company">Beanstock Media</div><div class="location" title="New York, NY">New York, NY</div><span class="post-tag">scala</span><span class="post-tag">storm</span></a></li><li><a data-cid="85572" data-la="qxvbhAc5Cr8" href="http://careers.stackoverflow.com/jobs/79137/php-developer-guidepoint" target="_blank" title="PHP Developer at Guidepoint. Click to learn more.">PHP Developer<br><div class="company">Guidepoint</div><div class="location" title="New York, NY">New York, NY</div><span class="post-tag">php</span><span class="post-tag">mysql</span></a></li><li><a data-cid="85806" data-la="qCmQoo9xyNl" href="http://careers.stackoverflow.com/jobs/79371/senior-qa-engineer-ocho" target="_blank" title="Senior QA Engineer at Ocho. Click to learn more.">Senior QA Engineer<br><div class="company">Ocho</div><div class="location" title="New York, NY">New York, NY</div><span class="post-tag">qa</span><span class="post-tag">software-engineering</span></a></li><li><a data-cid="86067" data-la="qHMFABnowAY" href="http://careers.stackoverflow.com/jobs/79632/frontend-developer-cbs-corporation" target="_blank" title="Frontend Developer at CBS Corporation. Click to learn more.">Frontend Developer<br><div class="company">CBS</div><div class="location" title="New York, NY">New York, NY</div><span class="post-tag">html5</span><span class="post-tag">css3</span></a></li></ul><img class="impression" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/i" style="display:none;"><img class="impression" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/r7zS387uLsZ-qxvbhAc5Cr8-qCmQoo9xyNl-qHMFABnowAY-2Z3UI" style="display:none;"></div>
+			  
+    
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/83073?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">665
+    </div>
+</a><a href="http://stackoverflow.com/questions/83073/why-not-use-tables-for-layout-in-html?rq=1" class="question-hyperlink">Why not use tables for layout in HTML?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/171027?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">1140
+    </div>
+</a><a href="http://stackoverflow.com/questions/171027/add-table-row-in-jquery?rq=1" class="question-hyperlink">Add table row in jQuery</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/901115?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">2708
+    </div>
+</a><a href="http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript?rq=1" class="question-hyperlink">How can I get query string values in JavaScript?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/7376926?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/7376926/how-to-change-div-id-value-when-adding-rows-to-a-table?rq=1" class="question-hyperlink">How to change Div Id value when adding rows to a table</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/17855977?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/17855977/jquery-remove-elements-parent-row?rq=1" class="question-hyperlink">jQuery - remove element's parent row</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/20053843?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/20053843/how-to-update-cells-in-the-html-table-row-when-change-one-column?rq=1" class="question-hyperlink">How to update cells in the HTML Table row when change one column?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/23826350?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">-2
+    </div>
+</a><a href="http://stackoverflow.com/questions/23826350/get-value-of-html-cells-in-row-clicked-with-javascript?rq=1" class="question-hyperlink">Get Value of HTML cells in row clicked with Javascript</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24038030?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/24038030/editable-grid-bug-when-loading-from-html-table?rq=1" class="question-hyperlink">Editable grid bug when loading from html table</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/24303676?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/24303676/how-to-edit-and-delete-the-row-in-javascript?rq=1" class="question-hyperlink">How to edit and delete the row in javascript?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/27805357?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/27805357/get-select-value-and-option-from-specific-table-row-and-column-with-javascript-o?rq=1" class="question-hyperlink">Get Select Value and Option from Specific Table Row and Column with Javascript or JQuery</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/40422/is-talking-about-quitting-to-your-supervisor-a-point-of-no-return" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is talking about quitting to your supervisor a point of no return
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/30154/is-there-a-name-for-a-chord-which-combines-the-major-and-minor-thirds-of-the-roo" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a name for a chord which combines the major and minor thirds of the root?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-lifehacks" title="Lifehacks Stack Exchange"></div><a href="http://lifehacks.stackexchange.com/questions/5552/how-to-keep-a-laptop-cooled-down" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:593 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to keep a laptop cooled down
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/230046/friendly-way-of-saying-i-love-you" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Friendly way of saying "I love you"
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-blender" title="Blender Stack Exchange"></div><a href="http://blender.stackexchange.com/questions/26184/why-wont-smart-uv-project-automatically-unwrap-a-simple-chair" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:502 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why won't Smart UV Project automatically unwrap a simple chair?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/44832/affordable-care-act-documentation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Affordable Care Act Documentation
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/136403/postgis-nearest-point-with-st-distance" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:79 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    PostGIS nearest point with ST_Distance
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/82374/is-it-ok-to-use-thread-sleep-and-thread-interrupt-for-pausing-and-resuming-threa" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it ok to use Thread.Sleep and Thread.Interrupt for pausing and resuming Thread like this?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-italian" title="Italian Language Stack Exchange"></div><a href="http://italian.stackexchange.com/questions/5154/how-can-i-translate-the-expression-i-dont-care-into-italian" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:524 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I translate the expression "I don't care" into Italian?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/40412/as-a-department-head-what-to-do-if-a-professor-leaves-without-notice-without-gi" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    As a department head, what to do if a professor leaves without notice without giving out grades?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/40288/can-i-force-my-professor-to-give-me-a-copy-of-his-powerpoint-presentation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I force my professor to give me a copy of his powerpoint presentation?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/75745/protect-export-from-overwriting-files" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Protect Export from overwriting files
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/43757/depart-uk-by-air-or-ship" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Depart UK by Air or Ship?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/229701/what-does-mathchar-do" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does mathchar do?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/670762/its-good-idea-truncate-a-file-while-is-in-use" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    it's good idea truncate a file while is in use?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/82323/calculate-distance-using-speed-of-sound" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Calculate distance using speed of sound
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/48731/why-are-fonts-more-expensive-when-used-in-games" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:174 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why are fonts more expensive when used in games?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/57183/what-are-the-consequences-of-eliminating-the-experience-points-cost-to-craft-mag" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are the consequences of eliminating the experience points cost to craft magic items?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-engineering" title="Engineering Stack Exchange"></div><a href="http://engineering.stackexchange.com/questions/1794/could-a-knife-blade-shaft-be-made-of-100-diamond" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:595 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Could a knife blade &amp; shaft be made of 100% diamond?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1161760/what-is-the-probability-of-guessing-all-the-oscar-winners" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the probability of guessing all the Oscar winners?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/40378/ethics-of-using-company-data-from-internship-for-academic-project" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Ethics of using company data from internship for academic project
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-vi" title="Vi and Vim Stack Exchange"></div><a href="http://vi.stackexchange.com/questions/2136/how-do-i-navigate-to-topics-in-vims-documentation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:599 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I navigate to topics in Vim's documentation?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/207407/will-i-definitely-lose-my-save-state-while-replacing-the-battery" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Will I definitely lose my save state while replacing the battery?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/82384/nested-loop-to-render-tiles-in-a-grid" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Nested loop to render tiles in a grid
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/11742946" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/11742946/ivc/2f6f');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/11742946/ivc/2f6f" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="Information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (14)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (10)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2015 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2015.2.23.2335
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('javascript,jquery,html,table');; ados_load(); });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');        
+        
+        ga('set', 'dimension2', '|javascript|jquery|html|table|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>        
+    
+    
+<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i; } else { d.textContent=i; } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script><script type="text/javascript" src="./javascript - Get the number of rows in a HTML table - Stack Overflow_files/p"></script></body></html>
